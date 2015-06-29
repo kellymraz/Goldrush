@@ -11,10 +11,11 @@ $(function(){
 	$(".map-container").on("click", function(event){
 		var x = event.pageX;
 		var y = event.pageY;
-		$(".map-container").append("<div class = 'marker'></div>").css({
-			"top" : y + "px",
-			"left" : x + "px"
-	})
+		var markerDot = $("<div class = 'marker'></div>").css({
+				top : (y - 15) + "px",
+				left : (x - 12)+ "px"
+		})
+		$(".map-container").append(markerDot)
 
 
 
